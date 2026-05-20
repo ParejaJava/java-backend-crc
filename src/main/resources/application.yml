@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: crc-platform
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: crc-waveform
+
+matlab:
+  mode: local
+  executable: matlab
+  script-dir: ./matlab
+  workspace-dir: ./workspace/matlab
+  timeout-seconds: 1800
+
+crc:
+  upload:
+    lock-ttl-seconds: 1800
+  task:
+    lock-ttl-seconds: 3600
+    max-retry-count: 3
